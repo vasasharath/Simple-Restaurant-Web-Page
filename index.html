@@ -53,6 +53,87 @@
         </div>
     </nav>
 
+    <div id="reservetablemodal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Reserve a Table</h2>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <dl class="row">
+                            <dd class="col-sm-2">Number of Guests</dd>
+                            <dd>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                    <label class="form-check-label" for="inlineRadio3">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                                    <label class="form-check-label" for="inlineRadio4">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                                    <label class="form-check-label" for="inlineRadio5">5</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                                    <label class="form-check-label" for="inlineRadio6">6</label>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl class="row">
+                            <dd class="col-sm-2">Section</dd>
+                            <div class="form-row">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+                                    </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="options" id="option2" autocomplete="off"> smoking
+                                    </label>
+                                </div>
+                            </div>
+                        </dl>
+                        <dl class="row">
+                            <dd class="col-sm-2">Date and Time</dd>
+                            <dd>
+
+                                <div class="form-row">
+                                    <div class="col-12 col-sm-5">
+                                        <input type="text" name="date" id="date" class="form-control" placeholder="Date">
+                                    </div>
+                                    <div class="col-12 col-sm-5">
+                                        <input type="text" name="time" id="time" class="form-control" placeholder="Time">
+                                    </div>
+                                </div>
+
+                            </dd>
+                        </dl>
+                        <dl class="row offset-2">
+                            <div class="form-row align-self-center">
+                                <button type="button" class="btn btn-secondary btn-sm mr-auto" data-dismiss="modal">Cancel </button>
+                                <button type="button" class="radiobutton  btn btn-primary">Reserve</button>
+                            </div>
+
+                        </dl>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
@@ -102,8 +183,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true" title="Or Call us at  <br><strong>+852 12345678</strong>"
-                        data-placement="bottom" href="#reserveform">Reserve Table</a>
+                    <a data-toggle="modal" data-target="#reservetablemodal" role="button" class="btn btn-block nav-link btn-warning">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -149,15 +229,15 @@
                         </div>
                     </div>
                     <ol class="carousel-indicators">
-                            <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#mycarousel" data-slide-to="1"></li>
-                            <li data-target="#mycarousel" data-slide-to="2"></li>
+                        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mycarousel" data-slide-to="1"></li>
+                        <li data-target="#mycarousel" data-slide-to="2"></li>
                     </ol>
                     <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </a>
-                        <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon"></span>
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
                     </a>
                 </div>
             </div>
@@ -219,138 +299,77 @@
                 </div>
             </div>
         </div>
-        <div class="row row-content justify-content-center">
-            <div class="col-sm-8">
-                <div class="card" id="reserveform">
-                    <h3 class="card-header text-white bg-warning">Reserve a Table</h3>
-                    <div class="card-body">
-                        <dl class="row">
-                            <dd class="col-sm-2">Number of Guests</dd>
-                            <dd>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">1</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">2</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                                    <label class="form-check-label" for="inlineRadio3">3</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
-                                    <label class="form-check-label" for="inlineRadio4">4</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
-                                    <label class="form-check-label" for="inlineRadio5">5</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
-                                    <label class="form-check-label" for="inlineRadio6">6</label>
-                                </div>
-                            </dd>
-                        </dl>
-                        <dl class="row">
-                            <dd class="col-sm-2">Date and Time</dd>
-                            <dd>
-                                <form>
-                                    <div class="form-row">
-                                        <div class="col-12 col-sm-5">
-                                            <input type="text" name="date" id="date" class="form-control" placeholder="Date">
-                                        </div>
-                                        <div class="col-12 col-sm-5">
-                                            <input type="text" name="time" id="time" class="form-control" placeholder="Time">
-                                        </div>
-                                    </div>
-                                </form>
-                            </dd>
-                        </dl>
-                        <dl class="row">
-                            <button type="button" class="btn btn-primary offset-2">Reserve</button>
-                        </dl>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-4 offset-1 col-sm-2">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="./aboutus.html">About</a>
-                        </li>
-                        <li>
-                            <a href="#">Menu</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
-                    </ul>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 offset-1 col-sm-2">
+                        <h5>Links</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="./aboutus.html">About</a>
+                            </li>
+                            <li>
+                                <a href="#">Menu</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-7 col-sm-5">
+                        <h5>Our Address</h5>
+                        <address>
+                            121, Clear Water Bay Road
+                            <br> Clear Water Bay, Kowloon
+                            <br> HONG KONG
+                            <br>
+                            <i class="fa fa-phone fa-lg"></i>: +852 1234 5678
+                            <br>
+                            <i class="fa fa-fax fa-lg"></i>: +852 8765 4321
+                            <br>
+                            <i class="fa fa-envelope fa-lg"></i>:
+                            <a href="mailto:confusion@food.net">confusion@food.net</a>
+                        </address>
+                    </div>
+                    <div class="col-12 col-sm-4 align-self-center">
+                        <div class="text-center">
+                            <a class="btn btn-social-icon btn-google" href="http://google.com/+">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                            <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id=">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a class="btn btn-social-icon btn-google" href="http://youtube.com/">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                            <a class="btn btn-social-icon" href="mailto:">
+                                <i class="fa fa-envelope-o"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-7 col-sm-5">
-                    <h5>Our Address</h5>
-                    <address>
-                        121, Clear Water Bay Road
-                        <br> Clear Water Bay, Kowloon
-                        <br> HONG KONG
-                        <br>
-                        <i class="fa fa-phone fa-lg"></i>: +852 1234 5678
-                        <br>
-                        <i class="fa fa-fax fa-lg"></i>: +852 8765 4321
-                        <br>
-                        <i class="fa fa-envelope fa-lg"></i>:
-                        <a href="mailto:confusion@food.net">confusion@food.net</a>
-                    </address>
-                </div>
-                <div class="col-12 col-sm-4 align-self-center">
-                    <div class="text-center">
-                        <a class="btn btn-social-icon btn-google" href="http://google.com/+">
-                            <i class="fa fa-google-plus"></i>
-                        </a>
-                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id=">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/">
-                            <i class="fa fa-linkedin"></i>
-                        </a>
-                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/">
-                            <i class="fa fa-youtube"></i>
-                        </a>
-                        <a class="btn btn-social-icon" href="mailto:">
-                            <i class="fa fa-envelope-o"></i>
-                        </a>
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <p>© Copyright 2018 Ristorante Con Fusion</p>
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-auto">
-                    <p>© Copyright 2018 Ristorante Con Fusion</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
+        </footer>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
