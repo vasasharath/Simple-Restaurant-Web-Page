@@ -1,4 +1,3 @@
-<script>
     $("#carouselButton").click(function () {
                 if ($("#carouselButton").children("span").hasClass('fa-pause')) {
         $("#mycarousel").carousel('pause');
@@ -17,5 +16,3 @@
             $("#reservetable").click(function () {
         $('#reservetablemodal').modal('toggle');
     });
-
-</script>
